@@ -1,0 +1,93 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\C#\\A_Task\\Assignment2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E0A6C437-F6B6-4765-88E8-D9E277FBD501}|Assignment2\\Assignment2.csproj|d:\\c#\\a_task\\assignment2\\assignment2\\task4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0A6C437-F6B6-4765-88E8-D9E277FBD501}|Assignment2\\Assignment2.csproj|solutionrelative:assignment2\\task4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0A6C437-F6B6-4765-88E8-D9E277FBD501}|Assignment2\\Assignment2.csproj|d:\\c#\\a_task\\assignment2\\assignment2\\task3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0A6C437-F6B6-4765-88E8-D9E277FBD501}|Assignment2\\Assignment2.csproj|solutionrelative:assignment2\\task3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0A6C437-F6B6-4765-88E8-D9E277FBD501}|Assignment2\\Assignment2.csproj|d:\\c#\\a_task\\assignment2\\assignment2\\task2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0A6C437-F6B6-4765-88E8-D9E277FBD501}|Assignment2\\Assignment2.csproj|solutionrelative:assignment2\\task2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0A6C437-F6B6-4765-88E8-D9E277FBD501}|Assignment2\\Assignment2.csproj|d:\\c#\\a_task\\assignment2\\assignment2\\task1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0A6C437-F6B6-4765-88E8-D9E277FBD501}|Assignment2\\Assignment2.csproj|solutionrelative:assignment2\\task1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "task4.cs",
+              "DocumentMoniker": "D:\\C#\\A_Task\\Assignment2\\Assignment2\\task4.cs",
+              "RelativeDocumentMoniker": "Assignment2\\task4.cs",
+              "ToolTip": "D:\\C#\\A_Task\\Assignment2\\Assignment2\\task4.cs",
+              "RelativeToolTip": "Assignment2\\task4.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAIwAwAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T04:05:53.76Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "task3.cs",
+              "DocumentMoniker": "D:\\C#\\A_Task\\Assignment2\\Assignment2\\task3.cs",
+              "RelativeDocumentMoniker": "Assignment2\\task3.cs",
+              "ToolTip": "D:\\C#\\A_Task\\Assignment2\\Assignment2\\task3.cs",
+              "RelativeToolTip": "Assignment2\\task3.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T03:34:00.919Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "task2.cs",
+              "DocumentMoniker": "D:\\C#\\A_Task\\Assignment2\\Assignment2\\task2.cs",
+              "RelativeDocumentMoniker": "Assignment2\\task2.cs",
+              "ToolTip": "D:\\C#\\A_Task\\Assignment2\\Assignment2\\task2.cs",
+              "RelativeToolTip": "Assignment2\\task2.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACEAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T03:19:27.427Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "task1.cs",
+              "DocumentMoniker": "D:\\C#\\A_Task\\Assignment2\\Assignment2\\task1.cs",
+              "RelativeDocumentMoniker": "Assignment2\\task1.cs",
+              "ToolTip": "D:\\C#\\A_Task\\Assignment2\\Assignment2\\task1.cs",
+              "RelativeToolTip": "Assignment2\\task1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T03:06:50.563Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
