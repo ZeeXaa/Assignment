@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\C#\\A_Task\\Assignment4\\Assignment4\\Assignment4.csproj",
-      "projectName": "Assignment4",
-      "projectPath": "D:\\C#\\A_Task\\Assignment4\\Assignment4\\Assignment4.csproj",
+      "projectUniqueName": "D:\\C#\\Assignment\\Assigment4\\Assigment4\\Assigment4.csproj",
+      "projectName": "Assigment4",
+      "projectPath": "D:\\C#\\Assignment\\Assigment4\\Assigment4\\Assigment4.csproj",
       "packagesPath": "C:\\Users\\ZeeXaa\\.nuget\\packages\\",
-      "outputPath": "D:\\C#\\A_Task\\Assignment4\\Assignment4\\obj\\",
+      "outputPath": "D:\\C#\\Assignment\\Assigment4\\Assigment4\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\Program Files (x86)\\VS Ex\\NuGetPackages"
