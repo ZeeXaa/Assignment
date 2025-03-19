@@ -1,0 +1,10 @@
+# C#编译文件
+[Bb]in/
+[Oo]bj/
+*.user
+*.suo
+.vs/
+packages/
+# 其他IDE生成文件（如Rider）
+.idea/
+*.csproj.user
