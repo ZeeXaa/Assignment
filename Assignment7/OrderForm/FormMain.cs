@@ -17,9 +17,9 @@ namespace OrderForm {
         public event Action<FormEdit> ShowEditForm = (f => { });
         public String Keyword { get; set; }
 
-        public FormMain()
-        {
+        public FormMain() {
             InitializeComponent();
+            InitOrders();
             bdsOrders.DataSource = orderService.GetAllOrders();
             cbxField.SelectedIndex = 0;
             txtKeyword.DataBindings.Add("Text", this, "Keyword");

@@ -1,5 +1,4 @@
-using OrderForm;
-using System;
+Ôªøusing System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -12,59 +11,63 @@ namespace OrderApp {
      * */
     public class OrderService {
 
-        private readonly MySQLOrderService _dbService;
+        //the order list
+        private List<Order> orders;
+
 
         public OrderService() {
-            _dbService = new MySQLOrderService("Server=localhost;Database=OrderDB;Uid=root;Pwd=yourpassword;");
+            orders = new List<Order>();
         }
+
 
         public List<Order> GetAllOrders() {
-            return _dbService.GetAllOrders();
+            return orders;
         }
 
+
         public Order GetOrder(int id) {
-            return _dbService.GetAllOrders().FirstOrDefault(o => o.OrderId == id);
+            return orders.Where(o => o.OrderId == id).FirstOrDefault();
         }
 
         public void AddOrder(Order order) {
-            var existingOrder = GetOrder(order.OrderId);
-            if (existingOrder != null)
-                throw new ApplicationException($"ÃÌº”¥ÌŒÛ: ∂©µ•{order.OrderId} “—æ≠¥Ê‘⁄¡À!");
-            _dbService.AddOrder(order);
+            if (orders.Contains(order))
+                throw new ApplicationException($"Ê∑ªÂä†ÈîôËØØ: ËÆ¢Âçï{order.OrderId} Â∑≤ÁªèÂ≠òÂú®‰∫Ü!");
+            orders.Add(order);
         }
 
         public void RemoveOrder(int orderId) {
-            var order = GetOrder(orderId);
+            Order order = GetOrder(orderId);
             if (order != null) {
-                _dbService.RemoveOrder(orderId); // ºŸ…Ë MySQLOrderService Ã·π© RemoveOrder ∑Ω∑®
+                orders.Remove(order);
             }
         }
 
         public List<Order> QueryOrdersByProductName(string productName) {
-            return _dbService.GetAllOrders()
-                .Where(order => order.Details.Exists(item => item.ProductName == productName))
-                .OrderBy(o => o.TotalPrice)
-                .ToList();
+            var query = orders
+                    .Where(order => order.Details.Exists(item => item.ProductName == productName))
+                    .OrderBy(o => o.TotalPrice);
+            return query.ToList();
         }
 
         public List<Order> QueryOrdersByCustomerName(string customerName) {
-            return _dbService.GetAllOrders()
+            return orders
                 .Where(order => order.CustomerName == customerName)
                 .OrderBy(o => o.TotalPrice)
                 .ToList();
         }
 
         public void UpdateOrder(Order newOrder) {
-            var oldOrder = GetOrder(newOrder.OrderId);
+            Order oldOrder = GetOrder(newOrder.OrderId);
             if (oldOrder == null)
-                throw new ApplicationException($"–ﬁ∏ƒ¥ÌŒÛ£∫∂©µ• {newOrder.OrderId} ≤ª¥Ê‘⁄!");
-            _dbService.UpdateOrder(newOrder); // ºŸ…Ë MySQLOrderService Ã·π© UpdateOrder ∑Ω∑®
+                throw new ApplicationException($"‰øÆÊîπÈîôËØØÔºöËÆ¢Âçï {newOrder.OrderId} ‰∏çÂ≠òÂú®!");
+            orders.Remove(oldOrder);
+            orders.Add(newOrder);
         }
 
         public void Export(String fileName) {
             XmlSerializer xs = new XmlSerializer(typeof(List<Order>));
             using (FileStream fs = new FileStream(fileName, FileMode.Create)) {
-                xs.Serialize(fs, GetAllOrders());
+                xs.Serialize(fs, orders);
             }
         }
 
@@ -73,17 +76,16 @@ namespace OrderApp {
             using (FileStream fs = new FileStream(path, FileMode.Open)) {
                 List<Order> temp = (List<Order>)xs.Deserialize(fs);
                 temp.ForEach(order => {
-                    var existingOrder = GetOrder(order.OrderId);
-                    if (existingOrder == null) {
-                        _dbService.AddOrder(order);
+                    if (!orders.Contains(order)) {
+                        orders.Add(order);
                     }
                 });
             }
         }
 
-        public object QueryByTotalAmount(float amount) {
-            return _dbService.GetAllOrders()
-               .Where(order => order.TotalPrice >= amount)
+        public object QueryByTotalAmount(float amout) {
+            return orders
+               .Where(order => order.TotalPrice >= amout)
                .OrderByDescending(o => o.TotalPrice)
                .ToList();
         }

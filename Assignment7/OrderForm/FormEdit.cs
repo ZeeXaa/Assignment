@@ -1,4 +1,5 @@
 ﻿using OrderApp;
+using OrderApp.Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -51,20 +52,40 @@ namespace OrderForm {
             }
         }
 
-        private void btnSave_Click(object sender, EventArgs e) {
-            //TODO 加上订单合法性验证
-            try {
-                if (this.EditFlag) {
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // 可选验证：是否至少有一个订单项
+                if (CurrentOrder.Details.Count == 0)
+                {
+                    MessageBox.Show("订单至少应包含一个订单项！");
+                    return;
+                }
+
+                // 保存到数据库
+                var repo = new OrderRepository();
+                repo.SaveOrder(CurrentOrder);  // ← 将订单保存到 MySQL
+
+                // 内存中同步保存（比如保存到订单列表）
+                if (this.EditFlag)
+                {
                     orderService.UpdateOrder(CurrentOrder);
-                } else {
+                }
+                else
+                {
                     orderService.AddOrder(CurrentOrder);
                 }
-                CloseEditFrom(this);
-            } catch (Exception e3) {
-                MessageBox.Show(e3.Message);
-            }
 
+                MessageBox.Show("订单保存成功！");
+                CloseEditFrom(this);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("保存失败：" + ex.Message);
+            }
         }
+
 
         private void btnEditDetail_Click(object sender, EventArgs e) {
             EditDetail();
